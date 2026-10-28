@@ -1,0 +1,1 @@
+{"name":"negaraku-berpasangan","version":"1.0.0","private":true,"description":"Enam pemain, tiga pasangan dan giliran fasa dikawal guru.","scripts":{"start":"node server.js","test":"node test-server.js"},"engines":{"node":">=18"}}

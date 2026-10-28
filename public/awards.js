@@ -1,0 +1,17 @@
+/* Certificates are generated only from the final server ranking. Names are drawn as text. */
+function downloadNegarakuCertificate(room,playerId){
+ const result=room.rankings?.find(r=>r.members.some(m=>m.id===playerId));if(!result)throw Error('Sijil tersedia selepas semua pasangan menamatkan tiga fasa.');
+ const member=result.members.find(m=>m.id===playerId),c=document.createElement('canvas');c.width=1600;c.height=1100;const x=c.getContext('2d');
+ const gold=['#c59b38','#8297aa','#b97c52'][result.rank-1];x.fillStyle='#fffdf6';x.fillRect(0,0,1600,1100);x.fillStyle='#14374e';x.fillRect(0,0,1600,28);x.fillRect(0,1072,1600,28);x.strokeStyle=gold;x.lineWidth=8;x.strokeRect(42,52,1516,996);x.lineWidth=2;x.strokeRect(60,70,1480,960);
+ for(const side of [0,1]){x.fillStyle=gold;x.beginPath();x.moveTo(side?1550:50,60);x.lineTo(side?1400:200,60);x.lineTo(side?1550:50,210);x.fill();}
+ const line=(text,y,size,color='#14374e')=>{x.fillStyle=color;x.font=`${size>=50?'bold ':''}${size}px Georgia,serif`;x.textAlign='center';x.fillText(text,800,y,1370);};
+ line('NEGARAKU',162,40);line('SIJIL PENGHARGAAN',267,76);line('PERMAINAN PATRIOTISME 3D',323,27);line('Dengan sukacitanya dianugerahkan kepada',415,30);line(member.name,500,68);x.strokeStyle=gold;x.beginPath();x.moveTo(330,530);x.lineTo(1270,530);x.stroke();
+ line('TEMPAT '+['PERTAMA','KEDUA','KETIGA'][result.rank-1],630,62,gold);line('Pasangan '+result.pair+'  •  '+result.score+' mata',694,34);line('atas kerjasama dan kejayaan menyelesaikan ketiga-tiga fasa',768,29);line('Kanak-kanak  •  Remaja  •  Dewasa',813,30);line('Semangat perpaduan, tanggungjawab dan cinta akan negara',872,27);
+ const date=new Intl.DateTimeFormat('ms-MY',{dateStyle:'long',timeZone:'Asia/Kuala_Lumpur'}).format(new Date());line(date+'  |  Bilik '+room.code,970,24);const a=document.createElement('a');a.download='Sijil-Negaraku-Tempat-'+result.rank+'-'+member.name.replace(/[^\p{L}\p{N} -]/gu,'').trim()+'.png';a.href=c.toDataURL('image/png');a.click();
+}
+function renderNegarakuResults(container,room,playerId=null){
+ container.replaceChildren();const heading=document.createElement('h2');heading.textContent='🏆 Keputusan & sijil penghargaan';container.append(heading);
+ const rule=document.createElement('p');rule.textContent='Markah tertinggi didahulukan. Jika seri: jumlah masa aktif setiap fasa yang lebih singkat, kemudian nombor pasangan. Masa menunggu guru tidak dikira.';container.append(rule);
+ for(const r of room.rankings||[]){const card=document.createElement('section');card.style.cssText='background:#eef5f8;border-left:5px solid '+['#c59b38','#8297aa','#b97c52'][r.rank-1]+';padding:16px;margin:12px 0;border-radius:12px;color:#14374e';const title=document.createElement('h3');title.textContent=['🥇','🥈','🥉'][r.rank-1]+' Tempat '+r.rank+' · Pasangan '+r.pair;card.append(title);const detail=document.createElement('p');detail.textContent=r.members.map(m=>m.name).join(' & ')+' · '+r.score+' mata · '+Math.floor(r.elapsedMs/60000)+' min '+Math.floor(r.elapsedMs%60000/1000)+' saat';card.append(detail);
+ for(const m of r.members)if(!playerId||m.id===playerId){const b=document.createElement('button');b.textContent='Muat turun sijil '+m.name;b.style.cssText='padding:10px 14px;margin:4px;background:#176f92;color:white;border:0;border-radius:8px;cursor:pointer';b.onclick=()=>downloadNegarakuCertificate(room,m.id);card.append(b);}container.append(card);}
+}

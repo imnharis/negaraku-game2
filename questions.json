@@ -1,0 +1,98 @@
+{
+  "KANAK": [
+    {
+      "situation": "Dalam video, pemadam saling membantu. Apakah tindakan yang paling sesuai untuk menjaga perpaduan di sekolah?",
+      "standard": "SP 7.1",
+      "options": [
+        "A. Membantu rakan yang selalu membantu kamu.",
+        "B. Membantu rakan yang memerlukan tanpa mengira kaum.",
+        "C. Membantu rakan selepas diminta oleh guru."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "situation": "Kamu diminta membentuk kumpulan untuk menghias kelas sempena Hari Kebangsaan. Bagaimanakah kamu boleh mengeratkan hubungan antara kaum?",
+      "standard": "SP 7.2",
+      "options": [
+        "A. Memilih rakan pelbagai kaum dan membahagikan tugas bersama.",
+        "B. Memilih rakan yang mahir menghias supaya kelas cepat siap.",
+        "C. Memilih rakan rapat supaya mudah membahagikan tugas."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "situation": "Kamu dan rakan pelbagai kaum berjaya menghias kelas bersama. Perasaan manakah yang paling menunjukkan semangat perpaduan?",
+      "standard": "SP 7.4",
+      "options": [
+        "A. Gembira kerana hiasan kelas kamu paling cantik.",
+        "B. Puas hati kerana guru memuji hasil kerja kamu.",
+        "C. Bangga kerana semua rakan bekerjasama walaupun berbeza kaum."
+      ],
+      "correctIndex": 2
+    }
+  ],
+  "REMAJA": [
+    {
+      "situation": "Kamu menerima video yang mendakwa suatu kejadian memburukkan negara, tetapi sumber dan tarikhnya tidak jelas. Apakah langkah paling wajar sebelum berkongsi?",
+      "options": [
+        "A. Baca komen terbanyak untuk menilai kebenarannya.",
+        "B. Tanya seorang rakan yang sering mengikuti isu itu.",
+        "C. Semak sumber asal dan bandingkan laporan yang sah.",
+        "D. Kongsi secara peribadi dengan label belum disahkan."
+      ],
+      "correctIndex": 2
+    },
+    {
+      "situation": "Rakan menyifatkan adat kaum lain sebagai pelik sehingga seorang ahli kumpulan tersinggung. Apakah respons paling membina?",
+      "options": [
+        "A. Tegur dengan sopan dan ajak memahami maksud adat itu.",
+        "B. Tukar topik supaya kerja kumpulan boleh diteruskan.",
+        "C. Minta ahli yang tersinggung menjelaskan dirinya dahulu.",
+        "D. Cadangkan agar semua perbincangan budaya dihentikan."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "situation": "Rakan enggan menyertai sambutan Hari Kebangsaan kerana menganggap aktivitinya tidak sesuai dengan minatnya. Bagaimanakah kamu menggalakkan penghayatan secara sukarela?",
+      "options": [
+        "A. Terangkan bahawa semua rakan lain sudah mendaftar.",
+        "B. Minta guru memasukkan namanya dalam senarai dahulu.",
+        "C. Cadangkan dia hadir untuk melengkapkan rekod sahaja.",
+        "D. Dengar alasannya dan cadangkan peranan yang bermakna."
+      ],
+      "correctIndex": 3
+    }
+  ],
+  "DEWASA": [
+    {
+      "situation": "Selepas program komuniti, sampah menutupi laluan pejalan kaki. Peralatan pembersihan tersedia dan kawasan selamat. Apakah tindakan segera paling berkesan?",
+      "options": [
+        "A. Hantar aduan bergambar dan tunggu tindakan petugas.",
+        "B. Ajak sukarelawan membersihkan laluan dan asingkan sampah.",
+        "C. Kumpulkan nama peserta untuk menentukan pihak bersalah.",
+        "D. Alihkan sampah ke kawasan rumput supaya laluan kosong."
+      ],
+      "correctIndex": 1
+    },
+    {
+      "situation": "Di kedai kamu, pelanggan pelbagai kaum menunggu pesanan. Tiada keperluan kecemasan. Apakah amalan layanan paling adil?",
+      "options": [
+        "A. Dahulukan pelanggan tetap untuk menghargai sokongan mereka.",
+        "B. Dahulukan pelanggan yang banyak bertanya tentang pesanan.",
+        "C. Siapkan pesanan bernilai tinggi sebelum pesanan lain.",
+        "D. Ikut giliran pesanan dan jelaskan tempoh menunggu."
+      ],
+      "correctIndex": 3
+    },
+    {
+      "situation": "Jiran berlainan kaum menjemput kamu ke rumah terbuka. Kamu kurang memahami adat sambutannya. Apakah tindakan paling sesuai untuk mengeratkan hubungan?",
+      "options": [
+        "A. Tanya secara sopan dan hadir dengan menghormati adat.",
+        "B. Hadir tetapi bergaul dengan tetamu yang dikenali sahaja.",
+        "C. Hantar hadiah melalui orang lain tanpa memberi respons.",
+        "D. Ikut semua perbuatan tetamu tanpa memahami kesesuaiannya."
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
